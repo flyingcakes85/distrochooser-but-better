@@ -38,9 +38,9 @@ let questions = [
   "Some distributions offer faster updates, which can affect system stability. What do you prefer?",
 ];
 
-let options = [
+let optionsList = [
   {
-    type: "check",
+    type: "checkbox",
     val: [
       "I want to use Linux for daily use.",
       "I want to use Linux for anonymous web browsing.",
@@ -74,7 +74,7 @@ let options = [
     ],
   },
   {
-    type: "check",
+    type: "checkbox",
     val: [
       "I want to install Linux the 'classical way' on the hard disk of my computer.",
       "I want to install Linux on a USB flash drive.",
@@ -96,7 +96,7 @@ let options = [
     ],
   },
   {
-    type: "check",
+    type: "checkbox",
     val: [
       "I prefer a windows like user interface.",
       "I prefer a macOS like user interface.",
@@ -104,7 +104,7 @@ let options = [
     ],
   },
   {
-    type: "check",
+    type: "checkbox",
     val: [
       "I can afford a fee to use the distribution.",
       "I prefer a free-to-use distribution.",
@@ -139,7 +139,7 @@ let options = [
     ],
   },
   {
-    type: "check",
+    type: "checkbox",
     val: [
       "I wish to run all applications in isolated containers. I am aware that this may cause the distribution more difficult to use.",
       "I know what 'systemd' is and wish to avoid that.",
@@ -148,7 +148,7 @@ let options = [
     ],
   },
   {
-    type: "check",
+    type: "checkbox",
     val: [
       "I want to install my programs using a kind of 'App store'.",
       "I want to install software mostly using terminal commands.",
@@ -160,6 +160,35 @@ let options = [
   },
 ];
 
+function renderQuestion() {
+  let title = document.getElementById("title");
+  let question = document.getElementById("question");
+  let options = document.getElementById("options");
+
+  title.innerHTML = titles[questionIndex];
+  question.innerHTML = questions[questionIndex];
+
+  let optionsInnerHTML = "";
+  options.innerHTML = "";
+
+  for (var i = 0; i < optionsList[questionIndex]["val"].length; ++i) {
+    optionsInnerHTML +=
+      '<div class="optionItem">' +
+      '<input type="' +
+      optionsList[questionIndex]["type"] +
+      '" name="magik" id="' +
+      i.toString() +
+      '" />' +
+      '<label for="' +
+      i.toString() +
+      '">' +
+      optionsList[questionIndex]["val"][i] +
+      "</label></div>";
+  }
+  options.innerHTML = optionsInnerHTML;
+  ++questionIndex;
+}
+
 function startQuiz() {
   questionIndex = 0;
 
@@ -168,11 +197,27 @@ function startQuiz() {
 
   let quizButtons = document.getElementsByClassName("quizButtons");
   quizButtons[0].style.display = "inline";
-  quizButtons[1].style.display = "inline";
 
   let start = document.getElementById("start");
   start.style.display = "none";
 
   let quiz = document.getElementById("quiz");
   quiz.style.display = "block";
+
+  renderQuestion();
+}
+
+function onClickNext() {
+  if (questionIndex < titles.length) {
+    renderQuestion();
+  } else {
+    let quizButtons = document.getElementsByClassName("quizButtons");
+    quizButtons[0].style.display = "none";
+
+    let quiz = document.getElementById("quiz");
+    quiz.style.display = "none";
+
+    let resultPage = document.getElementById("result");
+    resultPage.style.display = "block";
+  }
 }

@@ -15,7 +15,7 @@ body {
 }
 
 #heading {
-  font-size: 5vw;
+  font-size: clamp(12px, 5vh, 44px);
 }
 
 button {
@@ -37,6 +37,36 @@ button:hover {
   display: none;
 }
 
+img {
+  max-width: 50%;
+}
+
 #quiz {
   display: none;
+}
+li {
+  padding-bottom: 10px;
+}
+
+input {
+  margin-right: 10px;
+}
+
+.optionItem {
+  margin-bottom: 10px;
+}
+
+a {
+  color: yellow;
+}
+
+#result {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  #content {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }

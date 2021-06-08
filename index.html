@@ -11,34 +11,74 @@
   <body>
     <div id="content">
       <center>
-        <span id="heading"> DistroChooser but <i>Better</i>! </span>
+        <span id="heading"><u>DistroChooser</u> but <i>Better</i>! </span>
       </center>
       <br />
       <div id="intro">
         Welcome! This test will help you to choose a suitable Linux distribution
         for you.
         <ul>
-          <li>You can always skip questions</li>
-          <li>You can always click on 'get result'</li>
-          <li>You can answer in arbitrary order</li>
-          <li>You can delete answers at any time</li>
+          <li>This contains 16 questions</li>
+          <li>Choose the option(s) you want then click "Next"</li>
           <li>
-            You can weight properties at the end of the test to emphasize what
-            is important to you
+            You can always skip questions by clicking "Next" without answering
+          </li>
+          <li>
+            At the end of quiz, you will get distro recommendation based on your
+            answers
           </li>
         </ul>
       </div>
       <br />
       <div id="quiz">
         <div id="title">title</div>
+        <br />
         <div id="question">question</div>
+        <br />
         <div id="options">options here</div>
         <br />
       </div>
+
       <center>
         <button id="start" onclick="startQuiz()">Start</button>
-        <button id="prev" class="quizButtons">Previous</button>
-        <button id="next" class="quizButtons">Next</button>
+        <button id="next" class="quizButtons" onclick="onClickNext()">
+          Next
+        </button>
+      </center>
+      <center>
+        <div id="result">
+          <h3>
+            After our super AI <sup>1</sup> and Blockchain <sup>1</sup> powered
+            system analyzed your option, it has suggested the following distro
+          </h3>
+          <br />
+
+          <img
+            src="https://endeavouros.com/wp-content/uploads/2020/10/endeavour-logo-sans-logotype_plein-300x300.png"
+            alt="Endeavour OS Logo"
+          />
+          <br />
+          <h3>Endeavour OS</h3>
+
+          <p>
+            This is a close to vanilla Arch, bloat free distro. Although this
+            distro may not match all your preference, it is guaranteed that you
+            will adapt to this distro very quickly and enjoy the forum. Here is
+            their homepage
+            <a href="https://endeavouros.com/">endeavouros.com</a>
+          </p>
+          <hr />
+          <small>
+            1. I really have no idea what AI and Blockchain actually is, but
+            they are the hot keywords every tech startup these days is uning, so
+            I also used it. Probably, search engines will rank this website
+            higher if I have those keywords.
+            <br />
+            <a href="https://github.com/flyingcakes85/distrochooser-but-better"
+              >Source Code</a
+            >
+          </small>
+        </div>
       </center>
     </div>
   </body>
