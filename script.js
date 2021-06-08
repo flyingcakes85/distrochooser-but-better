@@ -12,7 +12,7 @@ let titles = [
   "Distributions: Price",
   "Distributions: Scope",
   "Distributions: Ideology",
-  "Distributions: Privace",
+  "Distributions: Privacy",
   "Distributions: Preset themes, icons and wallpapers",
   "Distributions: Special features",
   "Software: Administration",
