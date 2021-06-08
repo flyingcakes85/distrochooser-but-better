@@ -1,0 +1,42 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #121212;
+}
+
+#content {
+  background-color: #212121;
+  color: aliceblue;
+  padding: 12px;
+  margin: 12px;
+  font-family: sans-serif;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+#heading {
+  font-size: 5vw;
+}
+
+button {
+  background-color: #323232;
+  color: white;
+  border: none;
+  padding: 10px 34px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #565656;
+}
+
+#title {
+  font-weight: bold;
+}
+
+.quizButtons {
+  display: none;
+}
+
+#quiz {
+  display: none;
+}
