@@ -31,7 +31,7 @@ let questions = [
   "Most distributions are free. Some distributions offer additional support for an (initial) fee.",
   "Different Distributions install a different amount of programs. Some are installing a complete amount of programs to work 'out of the box'. Other distributions installing only a base install to let the user decide what software to use.",
   "The (license) ideology of a distribution is always a contentious debate. There are distributions using mostly 'free-licenses', others also use 'nonfree' software. Free licenses allow the user to modify, redistribute and use the software for any purpose. There are situations where a distribution has to use non-free software, for example for drivers. Nonfree software does not distribute it's sourcecode and modifications are not allowed. It is important to know if you have some preferences in a license model.",
-  "ome distributions use online services to improve the user experience. This may affect the privacy of the user, the user can be tracked when using such online features.",
+  "Some distributions use online services to improve the user experience. This may affect the privacy of the user, the user can be tracked when using such online features.",
   "Some distributions are shipping programs or desktops with own themes or icon sets to create a complete user experience.",
   "Some distributions may use special features, such as security enhancements. Which of the following features do I want to use (if any)?",
   "On Linux you can install software on different ways. You can build software from the sourcecode or install them via packages. What do I prefer?",
