@@ -219,5 +219,7 @@ function onClickNext() {
 
     let resultPage = document.getElementById("result");
     resultPage.style.display = "block";
+
+    document.body.className += ' joke';
   }
 }

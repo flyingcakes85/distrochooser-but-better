@@ -70,3 +70,7 @@ a {
     margin-right: 5%;
   }
 }
+
+.joke {
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='120px'><text x='0' y='10' fill='yellow' font-size='10'>this website is a joke</text></svg>");
+}
